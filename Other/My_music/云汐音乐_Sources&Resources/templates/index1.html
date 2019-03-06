@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="/www.w3.org/1999/xhtml">
+<head id="Head1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>云汐---云上的日子</title>
+<link rel="stylesheet" href="css/stylesheets/style.css">
+<script src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+</head>
+
+<body>
+  <div class="f-cb">&nbsp;</div>
+  <div class="m-music-list-wrap"></div>
+  <script src="src/js/smusic.min.js"></script> 
+  <link rel="stylesheet" href="src/css/smusic.css"/>
+	<h1>asdasd</h1>
+</body>
+</html>
+<script type="text/javascript" src="Images/jquery.js"></script>
+<script type="text/javascript" src="Images/ThreeWebGL.js"></script>
+<script type="text/javascript" src="Images/ThreeExtras.js"></script>
+<script type="text/javascript" src="Images/Detector.js"></script>
+<script type="text/javascript" src="Images/RequestAnimationFrame.js"></script>
+<script id="vs" type="x-shader/x-vertex">
+			varying vec2 vUv;
+			void main() {
+				vUv = uv;
+				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+			}
+    </script>
+<script id="fs" type="x-shader/x-fragment">
+			uniform sampler2D map;
+			uniform vec3 fogColor;
+			uniform float fogNear;
+			uniform float fogFar;
+			varying vec2 vUv;
+			void main() {
+				float depth = gl_FragCoord.z / gl_FragCoord.w;
+				float fogFactor = smoothstep( fogNear, fogFar, depth );
+				gl_FragColor = texture2D( map, vUv );
+				gl_FragColor.w *= pow( gl_FragCoord.z, 20.0 );
+				gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor );
+			}
+    </script>
+<script type="text/javascript" src="Images/cloud.js"></script>

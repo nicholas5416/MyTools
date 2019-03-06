@@ -1,0 +1,22 @@
+import os
+import rsa
+
+os.system("openssl rsa -pubin -text -modulus -in warmup -in public.key")
+openssl rsa -pubin -in pubkey.pem -text -modulus
+
+yafu_x64 factor(@) -batchfile rsa.txt
+yafu_x64 factor <N>
+input()
+
+
+
+或者通过python读取pem
+from Crypto.PublicKey import RSA
+with open('./pubkey.pem', 'r') as f:
+    key = RSA.importKey(f)
+    n = key.n
+    e = key.e
+print n
+# 87924348264132406875276140514499937145050893665602592992418171647042491658461
+print e
+# 65537

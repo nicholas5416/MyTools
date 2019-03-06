@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>网站视频播放器</title>
+    <meta name="keywords" content="播放器" />
+    <meta name="description" content="播放器插件"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/player.css?version=19.2.4.1">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+</head>
+<body>
+
+    <div id="video-div">
+        <video src="source/0.mp4" id="my-video" poster="source/0.jpg" preload="metadata">
+        </video>
+        <div class="play-one"></div>
+        <div class="yinyin yinyin-on">
+            <div class="play-footer">
+                <div class="progress">
+                    <span class="timeBar"></span>
+                </div>
+                <div class="play-btn stop"></div>
+                <div class="time">
+                    <span id="currentTime">00:00</span>
+                    <span>/</span>
+                    <span id="duration">00:00</span>
+                </div>
+                <div class="right-bottom">
+                    <div class="bottom all"></div>
+                    <div class="bottom loop" id="loop"></div>
+                    <div class="bottom set">
+                        <div class="set-list">
+                            <div class="play-speed">播放速度</div>
+                            <div class="play-speed-list">
+                                <span id="speed05Btn">X0.5</span>
+                                <span class="moren" id="speed1Btn">X1</span>
+                                <span id="speed2Btn">X2</span>
+                            </div>
+                        </div>
+                        <div class="konge1"></div>
+                    </div>
+                    <div class="bottom huazhi">自动</div>
+                    <div class="bottom sound" id="soundBtn">
+                        <div class="sound-list">
+                            <div class="sound-number">90</div>
+                            <div class="volume">
+                                <span class="volumeBar"></span>
+                            </div>
+                        </div>
+                        <div class="konge"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+<script type="text/javascript" src="javascript/player.js?version=19.2.4.1"></script>
+</body>
+</html>

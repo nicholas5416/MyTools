@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://127.0.0.1:49228/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searcher</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Newsletter-Subscription-Form.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="newsletter-subscribe">
+            <div class="container">
+                    <div class="intro">
+                        <h2 class="text-center">Music Search</h2>
+                    </div>
+                    <form action="/musicsearch" class="form-inline" method="post">
+                        <div class="form-group"><input class="form-control" type="text" name="source" placeholder="KeyWords"></div>
+                        <p>
+                                <label>
+                                  <input name="search_source" type="radio" id="search_source_0" value="QQ" checked="checked">
+                                  QQ</label>
+                                <br>
+                                <label>
+                                  <input type="radio" name="search_source" value="Netease" id="search_source_1">
+                                  Netease</label>
+                                <br>
+                                <label>
+                                  <input type="radio" name="search_source" value="KG" id="search_source_2">
+                                  KG</label>
+                                <br>
+                              </p>
+                        <div class="form-group"><button class="btn btn-primary" type="submit">Search </button></div>
+                        
+                    </form>
+                </div>
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Mv Search</h2>
+            </div>
+            <form action="/mvsearch" class="form-inline" method="post">
+                <div class="form-group"><input class="form-control" type="text" name="source" placeholder="KeyWords"></div>
+                <p>
+                        <label>
+                          <input name="search_source" type="radio" id="search_source_0" value="QQ" checked="checked">
+                          QQ</label>
+                        <br>
+                        <label>
+                          <input type="radio" name="search_source" value="Netease" id="search_source_1">
+                          Netease</label>
+                        <br>
+                      </p>
+                <div class="form-group"><button class="btn btn-primary" type="submit">Search </button></div>
+                
+            </form>
+        </div>
+
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script id="bs-live-reload" data-sseport="49229" data-lastchange="1550657821078" src="js/livereload.js"></script>
+
+
+</body></html>

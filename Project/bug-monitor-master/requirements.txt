@@ -1,0 +1,8 @@
+lxml
+beautifulsoup4
+pymongo
+dateutil.relativedelta
+werobot
+python-dateutil
+selenium
+configparser
